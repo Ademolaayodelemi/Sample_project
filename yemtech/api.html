@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Emobile - API </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<meta name="theme-color" content="#030C34">
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+</head>
+<body id="api">
+
+	<!-- HEADER STARTS -->
+	
+	<header class="header api-header d-flex align-center space">
+			<a href="index.html">
+				<img src="assets/images/Path.png" class="header-logo">
+			</a>
+
+			<div class="nav-right  d-flex align-center">
+
+				<svg aria-hidden="true" width="40" height="40" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" id="nav-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M416 224H31.1C14.33 224 0 238.3 0 256s14.33 32 31.1 32h384C433.7 288 448 273.7 448 256S433.7 224 416 224zM416 384H31.1C14.33 384 0 398.3 0 415.1S14.33 448 31.1 448h384C433.7 448 448 433.7 448 416S433.7 384 416 384zM416 64H31.1C14.33 64 0 78.33 0 95.1S14.33 128 31.1 128h384C433.7 128 448 113.7 448 96S433.7 64 416 64z"></path></svg>
+
+				<nav class="d-flex navigation api-nav">
+
+					<div class="btn-con d-flex mobile-btn space">
+						<a class="btn btn-colored" href="">Register</a>
+						<a class="btn btn-bordered" href="">Login</a>
+					</div>
+					
+					<svg aria-hidden="true" width="40" height="40" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark fa times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="white" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+
+					<div class="api-link d-flex flex-col">
+					<a class="nav-link" href="#introduction"><span class="fa fa-home"></span> Introduction</a>
+					<a class="nav-link" href="#authentication"><span class="fa fa-user-circle"></span> Authentication</a>
+					<a class="nav-link" href="#error"><span class="fa fa-clock-o"></span> Errors</a>
+					</div>
+
+					<div class="api-link d-flex flex-col">
+						<h4 class="api-link-title">API ENDPOINT</h4>
+						<a class="nav-link" href="#transaction">Transactions</a>
+						<a class="nav-link" href="">Transactions Split</a>
+						<a class="nav-link" href="">Customers</a>
+						<a class="nav-link" href="">Dedicated Virtual Accounts</a>
+						
+					</div>
+				</nav>
+
+			</div>
+
+			<div class="btn-con btn-header d-flex">
+					<a class="btn btn-colored" href="">Docs</a>
+					<a class="btn btn-bordered" href="">SignUp</a>
+			</div>
+	</header>
+
+	<!-- HEADER ENDS -->
+
+	<main>
+
+		<div class="api-body d-flex flex-col">
+			
+			<div id="introduction">
+					<div class="api-heading">
+						<h2 class="api-title">Introduction</h2>
+						<p class="api-subtitle">Learn how to integrate our APIs into your application</p>	
+					</div>
+
+
+					<div class="api-heading">
+						<h2 class="api-title">API Basics</h2>
+						<p class="api-text">
+							The Paystack API gives you access to pretty much all the features you can use on our dashboard and lets you extend them for use in your application. It strives to be RESTful and is organized around the main resources you would be interacting with - with a few notable exceptions.
+						</p>	
+					</div>
+
+
+					<div class="api-heading">
+						<h2 class="api-title">Sample Requests</h2>
+						<p class="api-text">
+							We provide sample API calls next to each method using cURL. All you need to do is insert your specific parameters, and you can test the calls from the command line. See this tutorial on using cURL with APIs.
+						</p>
+						
+						<p class="api-text">
+							You can also use Postman if you aren't familiar with cURL. Postman is an easy to use API development environment for making HTTP requests. You can download the Paystack Postman Collection to make testing the API easier.
+						</p>	
+					</div>
+
+
+					<div class="api-heading">
+						<h2 class="api-title">Requests and Response</h2>
+						<p class="api-text">
+							Both request body data and response data are formatted as JSON. Content type for responses will always be application/json.
+						</p>	
+					</div>
+
+			</div>
+
+
+			<div id="authentication">
+					<div class="api-heading">
+						<h2 class="api-title">Authentication</h2>
+						<p class="api-text">
+							Authenticate your API calls by including your secret key in the Authorization header of every request you make. You can manage your API keys from the dashboard.
+						</p>
+
+						<p class="api-text">
+							Generally, we provide both public and secret keys. Public keys are meant to be used from your front-end when integrating using Paystack Inline and in our Mobile SDKs only. By design, public keys cannot modify any part of your account besides initiating transactions to you. The secret keys however, are to be kept secret. If for any reason you believe your secret key has been compromised or you wish to reset them, you can do so from the dashboard.
+
+						</p>	
+					</div>
+
+			</div>
+
+
+			<div id="error">
+				
+				<div class="api-heading">
+						<h2 class="api-title">Errors</h2>
+						<p class="api-text">
+							As stated earlier, Paystack's API is RESTful and as such, uses conventional HTTP response codes to indicate the success or failure of requests.
+						</p>
+
+						<p class="api-text">We discuss some common errors and their causes below</p>	
+				</div>
+
+
+				<div>
+					<h2 class="api-subtitle">Authorization code does not exist or has been deactivated</h2>
+
+					<ol class="api-list">
+						<li class="api-text">
+							All authorizations are inactive until one transaction succeeds on the card. Attempting charge auth on an inactive authorization will give this message.
+						</li>
+
+						<li class="api-text">
+							You can only charge an authorization for the customer who saved it. If an authorization is paired with the wrong email, you may get this error message.
+						</li>
+
+						<li class="api-text">
+							You can only charge an authorization for the customer who saved it. If an authorization is paired with the wrong email, you may get this error message.
+						</li>
+					</ol>
+				</div>
+				
+			</div>
+
+
+			<div id="transaction">
+					
+				<div class="api-heading">
+						<h2 class="api-title">Transaction</h2>
+						<p class="api-subtitle">
+						The Transactions API allows you create and manage payments on your integration</p>
+				</div>
+
+				<div class="api-params">
+					<h3 class="params-title">Headers</h3>
+
+					<div class="params-data d-flex flex-col">
+						
+						<div class="params-table d-flex space">
+							
+							<div>
+								<h4 class="params-t-head">authorization</h4>
+								<p class="">string</p>
+							</div>
+							
+							<div>
+								<p>Set value to Bearer SECRET_KEY</p>
+							</div>
+						</div>
+
+						<div class="params-table d-flex space">
+							
+							<div>
+								<h4 class="params-t-head">authorization</h4>
+								<p class="">string</p>
+							</div>
+							
+							<div>
+								<p>Set value to Bearer SECRET_KEY</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+				<div class="api-params">
+					<h3 class="params-title">Body Param</h3>
+
+					<div class="params-data d-flex flex-col">
+						
+						<div class="params-table d-flex space">
+							
+							<div>
+								<h4 class="params-t-head">authorization</h4>
+								<p class="">string</p>
+							</div>
+							
+							<div>
+								<p>Set value to Bearer SECRET_KEY</p>
+							</div>
+						</div>
+
+						<div class="params-table d-flex space">
+							
+							<div>
+								<h4 class="params-t-head">authorization</h4>
+								<p class="">string</p>
+							</div>
+							
+							<div>
+								<p>Set value to Bearer SECRET_KEY</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	
+
+
+	</main>
+
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

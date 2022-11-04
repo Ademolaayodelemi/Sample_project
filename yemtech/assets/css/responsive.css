@@ -1,0 +1,58 @@
+
+@media(max-width: 992px){
+	
+	.fa.times{ position: absolute;  right: 5%; display: inline-block; top: 5%;}
+	.btn-header{ display: none; }
+	.header{padding: 0 10px;}
+	.swiper-slide{ background-position: 0px; }
+	.navigation{ position: absolute; width: 100%; left: -100%;z-index: 99; top: 0; height: 100vh; background:rgba(0, 0, 0, 0.5);gap: 20px; display: flex; flex-direction: column; padding: 45px 20px; position: fixed; transition: left 0.5s ease;}
+	.navigation::before{ content: ""; position: fixed; z-index: -1; width: 60%; height: 100%; background: var(--maincolor); left: -100%; top: 0; transition: inherit;}
+	.navigation-show, .navigation-show::before{ left: 0%; }
+	
+	#nav-icon{ display: inline-block; cursor: pointer;}
+	.nav-link{ font-size: 1.2rem;padding: 5px 0 10px;position: relative; width: 65%; border-bottom: 1px solid var(--white);}
+	.mobile-btn{ display: flex; width: 65%; margin-bottom: 30px;}
+	.main-services{gap:35px 10%;}
+	.services-list{ width: 45%; }
+	.about-banner{ height: 65vh!important; }
+
+	.api-body{ width: 100%; padding: 20px; left: 0; }
+
+}
+
+
+@media(max-width: 600px){
+	
+	.navigation::before{ width: 80%;  }
+	.nav-link, .mobile-btn{ width: 75%; }
+	.header-logo{width: 60px;}
+	.banner{ height: calc( 100vh - 90px); }
+	.banner-inner{margin: 0 30px;}
+	.banner-inner-text, .banner-inner-img{ width: 100%; }
+	.banner-subtitle{padding: 0 0px 0 0;}
+	.swiper-slide{ background-position: -400px 0; }
+	.grid-inline, .home-faq-inner > *{ width: 100%; }
+	.swiper-btn{ display: none!important; }
+	.swiper-btn.nexts,.swiper-btn.prevs{ display: flex!important; }
+	#nav-icon{ display: inline-block; }
+	.nav-right{  gap:15px; flex-flow: row-reverse;}
+
+	.container{padding: 80px 15px;}
+	.container-title{ width: 100%; }
+	.grid{ gap:50px; }
+	.grid-list{ width: 90%; margin: auto; }
+	.colored-container{gap: 50px;}
+	.solution-img,.solution-desc{ width: 100%; }
+
+	.faqs-inner{gap: 30px;}
+	.services-list, .faqs-inner > *{ width: 90%; margin: auto;}
+	.partners-grid .grid-list img{ width: 100%; }
+
+	.footer{ padding: 50px 30px;  }
+	.footer-link-box{ flex-wrap: wrap; gap: 40px 5%;}
+	.footer-link-inner{width: 47.5%;}
+
+	.params-table > div:nth-child(even){ padding-right: 0px; }
+	
+
+}	
